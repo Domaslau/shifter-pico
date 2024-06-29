@@ -1,0 +1,20 @@
+Shifter pico is quick drop in solution to interface Logitech shifter trough Raspberry pi pico w as a standalone USB controller
+It maps all gear states to button 1-6 + Reverse gear to button 7.
+
+To make it work wire serial connector to pico as follows:
+Serial 2 to pin 34 GP28
+Serial 3 to Serial 9 (Otherwise reverse sense won't work)
+Serial 4 to pin 32 ADC1
+Serial 6 to any GND pin on pico
+Serial 7 to pin 36 3v3(OUT)
+Serial 8 to pin 31 ADC0
+
+Once that's done download circuit python for the board from https://circuitpython.org/downloads
+
+Follow instructions from the website.
+
+Once that's done drag and drop source files and lib folder to your pico w.
+
+If you don't want to have to deal with pico showing as usb drive remove boot.py and rename the boot_disable_storage.py to boot.py and restart the board.
+
+If you need to reset your pico to fresh state you can follow this guide https://learn.adafruit.com/getting-started-with-raspberry-pi-pico-circuitpython/circuitpython
